@@ -48,6 +48,6 @@ function playRound(playerSelection, computerSelection) {
   
 
 
-  const playerSelection = "pApEr".toUpperCase();
+  const playerSelection = prompt('Rock, papers, or scissors?', "".toUpperCase());
   const computerSelection = getComputerChoice();
   console.log(playRound(playerSelection, computerSelection));
