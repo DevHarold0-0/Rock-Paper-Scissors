@@ -77,7 +77,7 @@ choice();
 //Rounds
 function playRound(playerSelection, computerSelection) {
     if (playerSelection === computerSelection) {
-        document.querySelector("#roundResults").textContent = `It's a tie`;
+        document.querySelector("#roundResults").textContent = `It's a tie.`;
     }
 
     if (playerSelection === "Rock" && computerSelection === "Scissors") {
@@ -110,7 +110,7 @@ function playRound(playerSelection, computerSelection) {
     else if (playerSelection === "Rock" && computerSelection === "Paper") {
         ++computerScore;
         document.querySelector("#computerScore").textContent = computerScore.toString();
-        document.querySelector("#roundResults").textContent = `You lose! Paper beats rock`;
+        document.querySelector("#roundResults").textContent = `You lose! Paper beats rock.`;
     }
 }
 
@@ -118,21 +118,17 @@ function playRound(playerSelection, computerSelection) {
 
 function gameResults() {
     if (playerScore === 5) {
-        document.querySelector("#gameResults").textContent = `You won this Best of 5.`;
+        document.querySelector("#gameResult").textContent = `You won this Best of 5.`;
         btnRock.setAttribute("disabled", "");
         btnPaper.setAttribute("disabled", "");
         btnScissors.setAttribute("disabled", "");
     }
     else if (computerScore === 5) {
-        document.querySelector("#gameResults").textContent = `You lost this Best of 5.`;
+        document.querySelector("#gameResult").textContent = `You lost this Best of 5.`;
         btnRock.setAttribute("disabled", "");
         btnPaper.setAttribute("disabled", "");
         btnScissors.setAttribute("disabled", "");
     }
 }
-
-
-
-
 
 
