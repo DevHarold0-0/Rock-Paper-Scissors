@@ -119,9 +119,15 @@ function playRound(playerSelection, computerSelection) {
 function gameResults() {
     if (playerScore === 5) {
         document.querySelector("#gameResults").textContent = `You won this Best of 5.`;
+        btnRock.setAttribute("disabled", "");
+        btnPaper.setAttribute("disabled", "");
+        btnScissors.setAttribute("disabled", "");
     }
     else if (computerScore === 5) {
         document.querySelector("#gameResults").textContent = `You lost this Best of 5.`;
+        btnRock.setAttribute("disabled", "");
+        btnPaper.setAttribute("disabled", "");
+        btnScissors.setAttribute("disabled", "");
     }
 }
 
