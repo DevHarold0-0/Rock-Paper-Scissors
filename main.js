@@ -1,7 +1,7 @@
+//Computer choice
 let rock = 1;
 let paper = 2;
 let scissors = 3;
-
 
 let min = 1;
 let max = 3;
@@ -75,47 +75,55 @@ choice();
 
 
 //Rounds
+const roundResults = document.querySelector("#roundResults");
+
 function playRound(playerSelection, computerSelection) {
     if (playerSelection === computerSelection) {
-        document.querySelector("#roundResults").textContent = `It's a tie.`;
+        roundResults.textContent = `It's a tie. Your ${playerSelection} is equal to their ${computerSelection}. Go again!`;
     }
 
     if (playerSelection === "Rock" && computerSelection === "Scissors") {
         ++playerScore;
         document.querySelector("#playerScore").textContent = playerScore.toString();
-        document.querySelector("#roundResults").textContent = `You won! Rock beats scissors.`;
+        roundResults.textContent = `You won! Your ${playerSelection} beats their ${computerSelection}.`;
     }
     else if (playerSelection === "Scissors" && computerSelection === "Rock") {
         ++computerScore;
         document.querySelector("#computerScore").textContent = computerScore.toString();
-        document.querySelector("#roundResults").textContent = `You lose! Rock beats scissors.`;
+        roundResults.textContent = `You lose! Your ${playerSelection} loses to their ${computerSelection}.`;
     }
 
     if (playerSelection === "Scissors" && computerSelection === "Paper") {
         ++playerScore;
         document.querySelector("#playerScore").textContent = playerScore.toString();
-        document.querySelector("#roundResults").textContent = `You won! Scissors beats paper.`;
+        roundResults.textContent = `You won! Your ${playerSelection} beats their ${computerSelection}.`;
     }
     else if (playerSelection === "Paper" && computerSelection === "Scissors") {
         ++computerScore;
         document.querySelector("#computerScore").textContent = computerScore.toString();
-        document.querySelector("#roundResults").textContent = `You lose! Scissors beats paper.`;
+        roundResults.textContent = `You lose! Your ${playerSelection} loses to their ${computerSelection}.`;
     }
 
     if (playerSelection === "Paper" && computerSelection === "Rock") {
         ++playerScore;
         document.querySelector("#playerScore").textContent = playerScore.toString();
-        document.querySelector("#roundResults").textContent = `You won! Paper beats rock.`;
+        roundResults.textContent = `You won! Your ${playerSelection} beats their ${computerSelection}.`;
     }
     else if (playerSelection === "Rock" && computerSelection === "Paper") {
         ++computerScore;
         document.querySelector("#computerScore").textContent = computerScore.toString();
-        document.querySelector("#roundResults").textContent = `You lose! Paper beats rock.`;
+        roundResults.textContent = `You lose! Your ${playerSelection} loses to their ${computerSelection}.`;
     }
 }
 
 
 
+
+
+
+
+
+//Game results
 function gameResults() {
     if (playerScore === 5) {
         document.querySelector("#gameResult").textContent = `You won this Best of 5.`;
