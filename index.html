@@ -2,29 +2,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Rock, Paper, Scissors</title>
 </head>
 <body>
-    <div id="container"></div>
-   
-    <h1> Player Score: 
-        <div id="playerScore"></div>
-    </h1>
 
-    <h1> Computer Score:
-        <div id="computerScore"></div>
-    </h1>
-    
-    <h1 id="Log">Log: 
-        <div id="roundResults"></div>
-        
-    </h1>
+    <section>
+        <div class="mainContent">
+            <div class="buttonContainer">
+                <div id="container"></div>
+            </div>
+            
+            <div class="subContent">
+                <h1 style="font-size: 35px;"> Player Score: 
+                    <span id="playerScore"></span>
+                </h1>
 
-    <h1>Game Result: 
-        <span id="gameResult"></span>
-        
-    </h1>
-    
+                <h1 style="font-size: 35px;"> Computer Score:
+                    <span id="computerScore" ></span>
+                </h1>
+                
+                <h1 id="Log" style="font-size: 35px;">Log: 
+                    <span id="roundResults"></span>
+                    
+                </h1>
+
+                <h1 style="font-size: 35px;">Game Result: 
+                    <span id="gameResult"></span>
+                    
+                </h1>
+            </div>
+        </div>
+    </section>
+
     <script src="main.js"></script>
 </body>
 </html>
